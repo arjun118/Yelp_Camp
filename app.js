@@ -10,6 +10,7 @@ app.use(express.json())
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:true}))
 app.use('/cg',campgroundRouter)
+
 db.once('open',()=>{
     console.log("Db connected")
     app.listen(3000,()=>{
